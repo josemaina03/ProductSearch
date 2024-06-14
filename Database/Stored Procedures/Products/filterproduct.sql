@@ -1,0 +1,10 @@
+USE PRODUCTSEARCH
+GO
+
+CREATE PROCEDURE FilterProductsByPrice
+  @MinPrice DECIMAL(10, 2),
+  @MaxPrice DECIMAL(10, 2)
+AS
+BEGIN
+  SELECT * FROM Products WHERE Price BETWEEN @MinPrice AND @MaxPrice;
+END;

@@ -1,0 +1,22 @@
+
+POST http://localhost:3000/Products
+Content-Type: application/json
+
+{
+    "Name": "laptop",
+    "Price": 2000
+}
+
+###
+GET  http://localhost:3000/products?minPrice=1000&maxPrice=3000
+
+###
+GET http://localhost:3000/products?minPrice=1000&maxPrice=3000&name=laptop
+###
+GET http://localhost:3000/products?page=1&perPage=5
+###
+GET http://localhost:3000/products?page=2&perPage=5
+###
+GET http://localhost:3000/products?page=2&perPage=5
+###
+GET http://localhost:3000/products/search?query=laptop

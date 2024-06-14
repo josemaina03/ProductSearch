@@ -1,0 +1,11 @@
+ USE PRODUCTSEARCH
+ GO
+CREATE PROCEDURE GetPaginatedProducts
+  @Offset INT,
+  @Limit INT
+AS
+BEGIN
+  SELECT * FROM Products
+  ORDER BY Id
+  OFFSET @Offset ROWS FETCH NEXT @Limit ROWS ONLY;
+END;
